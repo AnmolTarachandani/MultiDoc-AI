@@ -30,9 +30,12 @@ if mode == "Single Document Summary":
             st.success(summary)
 
             st.subheader("📌 Bullet Points")
-            bullets = convert_to_bullets(text)
-            for bullet in bullets:
-                st.markdown(f"• {bullet}")
+            bullets = convert_to_bullets(summary) if summary else []
+            if bullets:
+                for bullet in bullets:
+                    st.markdown(f"- {bullet}")
+            else:
+                st.warning("No bullet points could be extracted.")
 
 elif mode == "Compare Two Documents":
     col1, col2 = st.columns(2)
