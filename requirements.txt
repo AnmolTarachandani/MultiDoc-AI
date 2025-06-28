@@ -1,11 +1,7 @@
 streamlit
 PyPDF2
 python-docx
-pillow
 pytesseract
-pdf2image
-langdetect
+Pillow
 transformers
-torch==2.0.1
 sentencepiece
-diff-match-patch
